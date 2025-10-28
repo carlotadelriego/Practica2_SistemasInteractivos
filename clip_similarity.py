@@ -19,3 +19,14 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 df = pd.read_csv(CAPTIONS_FILE)
 print(f"Dataset loaded: {len(df)} samples")
 
+
+# MODELO CLIP
+model_name = "openai/clip-vit-base-patch32"
+clip_model = CLIPModel.from_pretrained(model_name).to(DEVICE)
+clip_processor = CLIPProcessor.from_pretrained(model_name)
+clip_model.eval()
+
+
+# EMBEDDINGS
+image_embeddings = []
+text_embeddings = []
