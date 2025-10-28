@@ -11,7 +11,7 @@ from tqdm import tqdm
 from sklearn.decomposition import PCA
 
 
-# CONFIGURACIÓN DE RUTAS Y DISPOSITIVO
+# CONFIGURACIÓN
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # Directorio actual
 CAPTIONS_FILE = os.path.join(BASE_DIR, "dataset_UrbanScenes.csv")
 DATASET_DIR = os.path.join(BASE_DIR, "dataset")  # Directorio con las imágenes
